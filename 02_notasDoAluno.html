@@ -1,0 +1,23 @@
+<script>
+    //Problema: Notas do Alunos
+    /*
+    Considere que um aluno obteve as seguintes notas, colocadas em um array:
+    const notasAluno = [7, 5, 9, 8];
+    Identifique a maior nota, a menor nota e também calcule a média obtida pelo aluno.
+    */
+
+    //Entrada
+    const notasAluno = [7, 5, 9, 8];
+
+    //Processamento
+    notasAluno.sort(function(a,b){return a-b});
+    let maior = notasAluno[notasAluno.length - 1];
+    let menor = notasAluno[0];
+    let soma = 0;
+    for (let numero of notasAluno) {
+        soma += numero;
+    }
+    //Saída
+    document.write (`Maior nota: ${maior} <br> Menor nota: ${menor} <br> Média: ${soma / notasAluno.length}`);
+
+</script>
